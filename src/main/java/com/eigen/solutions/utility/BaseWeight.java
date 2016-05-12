@@ -1,4 +1,4 @@
-package com.eigen.solutions.predict;
+package com.eigen.solutions.utility;
 
 public class BaseWeight {
 

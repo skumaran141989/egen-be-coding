@@ -17,9 +17,9 @@ import com.eigen.solutions.mongo.connection.MorphiaConnection;
 public class AlertController {
 
 	@RequestMapping(value = "/read", method = RequestMethod.GET)
-	public List<Alerts> read() throws UnknownHostException {
+	public List<Alerts> read() {
 
-		List<Alerts> list = MorphiaConnection.getConnection().createQuery(Alerts.class).asList();
+		List<Alerts> list = MorphiaConnection.getConnection().createQuery(Alerts.class).order("timeStamp").asList();
 
 		return list;
 
@@ -30,7 +30,7 @@ public class AlertController {
 
 		Query<Alerts> query = MorphiaConnection.getConnection().createQuery(Alerts.class);
 		query.and(query.criteria("timeStamp").greaterThanOrEq(start), query.criteria("timeStamp").lessThanOrEq(end));
-		List<Alerts> list = query.asList();
+		List<Alerts> list = query.order("timeStamp").asList();
 
 		return list;
 

@@ -7,7 +7,7 @@ import org.easyrules.annotation.Rule;
 import com.eigen.solutions.data.Alerts;
 import com.eigen.solutions.data.Metric;
 import com.eigen.solutions.mongo.connection.MorphiaConnection;
-import com.eigen.solutions.predict.BaseWeight;
+import com.eigen.solutions.utility.BaseWeight;
 
 @Rule(name = "OverWeightRule", description = "Alert only weight shoots 10%")
 public class OverWeightRule {

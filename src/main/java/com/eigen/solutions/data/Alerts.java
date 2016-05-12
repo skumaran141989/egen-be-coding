@@ -8,11 +8,11 @@ import org.mongodb.morphia.annotations.Id;
 public class Alerts {
 	@Id
 	private ObjectId id;
-	private long timeStamp;
+	private Long timeStamp;
 	private Boolean underWeight;
 	private Boolean overWeight;
 
-	public long getTimeStamp() {
+	public Long getTimeStamp() {
 		return timeStamp;
 	}
 
@@ -24,7 +24,7 @@ public class Alerts {
 		return overWeight;
 	}
 
-	public void setTimeStamp(long timeStamp) {
+	public void setTimeStamp(Long timeStamp) {
 		this.timeStamp = timeStamp;
 	}
 
